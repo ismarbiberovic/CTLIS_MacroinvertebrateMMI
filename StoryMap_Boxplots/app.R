@@ -1,7 +1,9 @@
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(shiny, ggplot2, scales, tidyverse, ggiraph, rsconnect, openxlsx, shinyWidgets, bs4Dash)
 
-??read.xlsx
+
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 # Load data
 data_mets <- read.xlsx("data/BugMetrics_4app.xlsx")
 
